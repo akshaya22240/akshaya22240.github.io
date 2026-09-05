@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akshaya C | Portfolio</title>
+  <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -412,6 +413,22 @@
       gap: 1rem;
     }
 
+    /* Resume Section */
+    .resume-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .resume-box p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
     /* Footer */
     footer {
       background: var(--surface);
@@ -450,6 +467,7 @@
 </head>
 <body>
 
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo">Akshaya C</a>
@@ -460,11 +478,14 @@
         <li><a href="#internships">Internships</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero">
     <div class="container hero-content">
       <span class="hero-badge"><i class="fa-solid fa-code"></i> Computer Science Engineer</span>
@@ -475,11 +496,12 @@
       </p>
       <div class="btn-group">
         <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-arrow-down"></i> View Projects</a>
-        <a href="resume.pdf" download class="btn btn-outline"><i class="fa-regular fa-file-lines"></i> Download Resume</a>
+        <a href="resume.pdf" download="Akshaya_C_Resume.pdf" class="btn btn-outline"><i class="fa-regular fa-file-lines"></i> Download Resume</a>
       </div>
     </div>
   </header>
 
+  <!-- About Me Section -->
   <section id="about" class="container">
     <div class="section-header">
       <p class="section-tag">About Me</p>
@@ -487,11 +509,12 @@
     </div>
     <div style="background: var(--surface); border: 1px solid var(--border); padding: 2rem; border-radius: var(--radius);">
       <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;">
-        I am a Computer Science Engineering student based in Madurai, Tamil Nadu, with hands-on experience in full-stack web development and applied AI/ML tools. Through hackathons and enterprise internships at organizations like IBM and HCLTech, I focus on transforming data into efficient software tools that simplify operations and improve user experience.
+        I am a Computer Science Engineering student at SRM Madurai College For Engineering And Technology, based in Madurai, Tamil Nadu. With practical experience in full-stack web technologies and applied data analytics, I specialize in building solutions that optimize processes and extract actionable insights. My journey includes competitive hackathons and industrial internships at IBM and HCLTech, where I developed a strong foundation in scalable problem-solving and software engineering.
       </p>
     </div>
   </section>
 
+  <!-- Skills Section -->
   <section id="skills" class="container">
     <div class="section-header">
       <p class="section-tag">Expertise</p>
@@ -499,7 +522,7 @@
     </div>
     <div class="skills-grid">
       <div class="skill-card">
-        <h3><i class="fa-solid fa-code text-primary"></i> Programming</h3>
+        <h3><i class="fa-solid fa-code" style="color: var(--primary);"></i> Programming</h3>
         <div class="badge-wrap">
           <span class="badge">Python</span>
           <span class="badge">Java</span>
@@ -507,7 +530,7 @@
         </div>
       </div>
       <div class="skill-card">
-        <h3><i class="fa-solid fa-layer-group"></i> Web & Backend</h3>
+        <h3><i class="fa-solid fa-layer-group" style="color: var(--primary);"></i> Web & Backend</h3>
         <div class="badge-wrap">
           <span class="badge">HTML5 / CSS3</span>
           <span class="badge">JavaScript</span>
@@ -515,16 +538,17 @@
         </div>
       </div>
       <div class="skill-card">
-        <h3><i class="fa-solid fa-chart-line"></i> Analytics & Tools</h3>
+        <h3><i class="fa-solid fa-chart-line" style="color: var(--primary);"></i> Analytics & Tools</h3>
         <div class="badge-wrap">
           <span class="badge">Power BI</span>
-          <span class="badge">MS Office Suite</span>
+          <span class="badge">MS Office</span>
           <span class="badge">Git / GitHub</span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Projects Section -->
   <section id="projects" class="container">
     <div class="section-header">
       <p class="section-tag">Portfolio</p>
@@ -554,14 +578,15 @@
       </div>
       <div class="project-card">
         <div>
-          <h3>SkillGap AI</h3>
-          <p>Intelligent skills gap analysis platform matching current student profiles against dynamic industry role competencies.</p>
+          <h3>Flight Delay Prediction</h3>
+          <p>Data analytics and machine learning solution analyzing flight operational patterns, weather data, and schedule delays to provide accurate arrival estimates.</p>
         </div>
         <a href="https://github.com/akshaya22240" target="_blank" rel="noopener noreferrer" class="link-action">View on GitHub &rarr;</a>
       </div>
     </div>
   </section>
 
+  <!-- Internships Section -->
   <section id="internships" class="container">
     <div class="section-header">
       <p class="section-tag">Experience</p>
@@ -572,7 +597,7 @@
         <div class="timeline-content">
           <h3>IBM</h3>
           <div class="timeline-role">Technical Intern</div>
-          <p>Awarded an internship opportunity after excelling in a state-level hackathon. Gained hands-on exposure to cloud environments and enterprise technologies.</p>
+          <p>Secured an internship directly through state-level hackathon performance. Gained exposure to enterprise workflows, cloud architecture, and technical problem solving.</p>
           <a href="https://drive.google.com/file/d/1H7J5qD8ue4Zj7OrtNtVePNpEdaa25HAw/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="link-action">
             <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
           </a>
@@ -592,22 +617,16 @@
         <div class="timeline-content">
           <h3>Reccsar Private Limited</h3>
           <div class="timeline-role">Software Development Intern</div>
-          <p>Implemented modular feature sets and collaborated on frontend and backend integration tasks across production-bound builds.</p>
+          <p>Implemented modular feature sets and collaborated on frontend and backend integration tasks across production builds.</p>
           <a href="https://drive.google.com/file/d/13gNbFCKECxhWOHLEK4jmxhbu22QqQSVh/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="link-action">
             <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
           </a>
         </div>
       </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h3>Skill Craft Technology</h3>
-          <div class="timeline-role">Web Development Intern</div>
-          <p>Applied web fundamentals to build responsive and user-friendly interface components.</p>
-        </div>
-      </div>
     </div>
   </section>
 
+  <!-- Achievements Section -->
   <section id="achievements" class="container">
     <div class="section-header">
       <p class="section-tag">Recognition</p>
@@ -625,12 +644,13 @@
         <div class="achievement-icon"><i class="fa-solid fa-medal"></i></div>
         <div>
           <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">IBM Placement Recognition</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">Secured an industry internship spot at IBM solely through hackathon evaluation.</p>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Secured an industry internship spot at IBM solely through competitive hackathon evaluation.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Certifications Section -->
   <section id="certifications" class="container">
     <div class="section-header">
       <p class="section-tag">Learning</p>
@@ -664,6 +684,7 @@
     </div>
   </section>
 
+  <!-- Education Section -->
   <section id="education" class="container">
     <div class="section-header">
       <p class="section-tag">Academics</p>
@@ -681,6 +702,21 @@
     </div>
   </section>
 
+  <!-- Resume Section -->
+  <section id="resume" class="container">
+    <div class="section-header">
+      <p class="section-tag">Curriculum Vitae</p>
+      <h2 class="section-title">Resume</h2>
+    </div>
+    <div class="resume-box">
+      <p>Download a copy of my resume to review my full qualifications, projects, and academic history.</p>
+      <a href="resume.pdf" download="Akshaya_C_Resume.pdf" class="btn btn-primary">
+        <i class="fa-solid fa-download"></i> Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact & Footer -->
   <footer id="contact">
     <div class="container" style="padding-top: 0; padding-bottom: 2rem;">
       <h2 style="font-size: 1.75rem; margin-bottom: 1rem;">Let's Connect</h2>
@@ -688,8 +724,8 @@
         Feel free to reach out for opportunities, collaborations, or inquiries.
       </p>
       <div class="btn-group" style="justify-content: center; margin-bottom: 2.5rem;">
-        <a href="mailto:akshayachokkalingam33@gmail.com" class="btn btn-primary">
-          <i class="fa-regular fa-envelope"></i> Send an Email
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=akshayachokkalingam33@gmail.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <i class="fa-regular fa-envelope"></i> Send an Email via Gmail
         </a>
         <a href="tel:+919345629933" class="btn btn-outline">
           <i class="fa-solid fa-phone"></i> +91 9345629933
