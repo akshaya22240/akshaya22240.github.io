@@ -274,11 +274,28 @@
       margin-bottom: 0.5rem;
     }
 
-    .project-card p {
+    .project-status {
+      display: inline-block;
+      font-size: 0.75rem;
+      background: #fef3c7;
+      color: #b45309;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .project-card ul {
+      list-style-position: inside;
       color: var(--text-muted);
       font-size: 0.95rem;
       margin-bottom: 1.25rem;
       flex-grow: 1;
+    }
+
+    .project-card li {
+      margin-bottom: 0.5rem;
     }
 
     /* Timeline (Internships) */
@@ -323,16 +340,26 @@
     }
 
     .timeline-role {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: var(--primary);
+    }
+
+    .timeline-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
       margin-bottom: 0.75rem;
     }
 
-    .timeline-content p {
+    .timeline-content ul {
+      list-style-position: inside;
       color: var(--text-muted);
       font-size: 0.95rem;
       margin-bottom: 1rem;
+    }
+
+    .timeline-content li {
+      margin-bottom: 0.35rem;
     }
 
     /* Achievements */
@@ -400,7 +427,13 @@
       gap: 0.6rem;
     }
 
-    /* Education Card */
+    /* Education Grid */
+    .education-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
     .edu-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -454,7 +487,6 @@
       color: var(--primary);
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -470,7 +502,7 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">Akshaya C</a>
+      <a href="#" class="nav-logo">AKSHAYA C</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -492,7 +524,7 @@
       <h1>AKSHAYA C</h1>
       <p class="hero-subtitle">Web Developer | AI/ML Enthusiast</p>
       <p class="hero-description">
-        Passionate about crafting data-driven web applications and scalable solutions. Striving to utilize my problem-solving abilities and hands-on technical skills to deliver high-impact organizational results.
+        Final-year Computer Science and Engineering student with a CGPA of 8.12 and internship experience in software development and full stack web development at IBM, HCLTech, and Reccsar Private Limited.
       </p>
       <div class="btn-group">
         <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-arrow-down"></i> View Projects</a>
@@ -505,11 +537,11 @@
   <section id="about" class="container">
     <div class="section-header">
       <p class="section-tag">About Me</p>
-      <h2 class="section-title">Background & Drive</h2>
+      <h2 class="section-title">Professional Summary</h2>
     </div>
     <div style="background: var(--surface); border: 1px solid var(--border); padding: 2rem; border-radius: var(--radius);">
       <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8;">
-        I am a Computer Science Engineering student at SRM Madurai College For Engineering And Technology, based in Madurai, Tamil Nadu. With practical experience in full-stack web technologies and applied data analytics, I specialize in building solutions that optimize processes and extract actionable insights. My journey includes competitive hackathons and industrial internships at IBM and HCLTech, where I developed a strong foundation in scalable problem-solving and software engineering.
+        Final-year Computer Science and Engineering student with a CGPA of 8.12 and internship experience in software development and full stack web development at IBM, HCLTech, and Reccsar Private Limited. Skilled in Python, C Programming, Java, HTML, CSS, JavaScript, Power BI, and MS Office, with hands-on work in web application development and data analytics. Recognized by IBM for analytical aptitude and selected among top 400 teams from 15,000 participants in competitive hackathon, leading to IBM internship opportunity. Strong problem solving, critical thinking, and adaptability skills.
       </p>
     </div>
   </section>
@@ -518,11 +550,11 @@
   <section id="skills" class="container">
     <div class="section-header">
       <p class="section-tag">Expertise</p>
-      <h2 class="section-title">Technical Skills</h2>
+      <h2 class="section-title">Skills</h2>
     </div>
     <div class="skills-grid">
       <div class="skill-card">
-        <h3><i class="fa-solid fa-code" style="color: var(--primary);"></i> Programming</h3>
+        <h3><i class="fa-solid fa-code" style="color: var(--primary);"></i> Programming Languages</h3>
         <div class="badge-wrap">
           <span class="badge">Python</span>
           <span class="badge">Java</span>
@@ -530,19 +562,18 @@
         </div>
       </div>
       <div class="skill-card">
-        <h3><i class="fa-solid fa-layer-group" style="color: var(--primary);"></i> Web & Backend</h3>
+        <h3><i class="fa-solid fa-layer-group" style="color: var(--primary);"></i> Web Development</h3>
         <div class="badge-wrap">
-          <span class="badge">HTML5 / CSS3</span>
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
           <span class="badge">JavaScript</span>
-          <span class="badge">Spring REST</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3><i class="fa-solid fa-chart-line" style="color: var(--primary);"></i> Analytics & Tools</h3>
+        <h3><i class="fa-solid fa-chart-line" style="color: var(--primary);"></i> Analytics & Productivity</h3>
         <div class="badge-wrap">
           <span class="badge">Power BI</span>
           <span class="badge">MS Office</span>
-          <span class="badge">Git / GitHub</span>
         </div>
       </div>
     </div>
@@ -552,73 +583,112 @@
   <section id="projects" class="container">
     <div class="section-header">
       <p class="section-tag">Portfolio</p>
-      <h2 class="section-title">Featured Projects</h2>
+      <h2 class="section-title">Projects</h2>
     </div>
     <div class="projects-grid">
+      <!-- BusFactor AI -->
       <div class="project-card">
         <div>
           <h3>BusFactor AI</h3>
-          <p>Key person risk analysis engine designed to evaluate dependency risks across software engineering repositories and maintain code health.</p>
+          <span class="project-status">Ongoing</span>
+          <ul>
+            <li>Developing an AI-powered workforce analytics system to assess employee criticality, business impact, and replacement recommendations.</li>
+            <li>Applying Python, Machine Learning, XGBoost, and Cosine Similarity to analyze employee skills, dependency, knowledge, and workforce risk.</li>
+          </ul>
         </div>
         <a href="https://github.com/akshaya22240" target="_blank" rel="noopener noreferrer" class="link-action">View on GitHub &rarr;</a>
       </div>
+
+      <!-- RecruitPro -->
       <div class="project-card">
         <div>
           <h3>RecruitPro</h3>
-          <p>Departmental HR Recruitment & AI Resume Analytics System aimed at automating candidate scoring and operational workflow.</p>
+          <p style="font-weight: 600; color: var(--text-main); font-size: 0.9rem; margin-bottom: 0.5rem;">Departmental HR Recruitment & AI Resume Analytics System</p>
+          <ul>
+            <li>Developed a recruitment management system to manage jobs, candidates, applications, interviews, and employee recruitment workflows.</li>
+            <li>Built using HTML, CSS, JavaScript, React.js, and Node.js, with a focus on responsive and user-friendly interface.</li>
+          </ul>
         </div>
         <a href="https://github.com/akshaya22240" target="_blank" rel="noopener noreferrer" class="link-action">View on GitHub &rarr;</a>
       </div>
+
+      <!-- HabitNova -->
       <div class="project-card">
         <div>
           <h3>HabitNova</h3>
-          <p>Smart habit tracking and productivity platform focused on habit consistency, visual progress reporting, and gamification.</p>
+          <p style="font-weight: 600; color: var(--text-main); font-size: 0.9rem; margin-bottom: 0.5rem;">Smart Habit Tracking and Productivity Platform</p>
+          <ul>
+            <li>Developed a web-based platform for habit tracking, productivity monitoring, and progress visualization.</li>
+            <li>Implemented features using React.js, Tailwind CSS, React Router, Recharts, and Node.js/Express.</li>
+          </ul>
         </div>
         <a href="https://github.com/akshaya22240" target="_blank" rel="noopener noreferrer" class="link-action">View on GitHub &rarr;</a>
       </div>
+
+      <!-- Flight Delay Prediction -->
       <div class="project-card">
         <div>
           <h3>Flight Delay Prediction</h3>
-          <p>Data analytics and machine learning solution analyzing flight operational patterns, weather data, and schedule delays to provide accurate arrival estimates.</p>
+          <ul>
+            <li>Developed a machine learning model to predict flight delays based on relevant flight and operational factors.</li>
+            <li>Applied Python and machine learning techniques for data preprocessing, model training, and performance evaluation.</li>
+          </ul>
         </div>
         <a href="https://github.com/akshaya22240" target="_blank" rel="noopener noreferrer" class="link-action">View on GitHub &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- Internships Section -->
+  <!-- Work Experience / Internships Section -->
   <section id="internships" class="container">
     <div class="section-header">
       <p class="section-tag">Experience</p>
-      <h2 class="section-title">Internships</h2>
+      <h2 class="section-title">Work Experience</h2>
     </div>
     <div class="timeline">
+      <!-- Reccsar -->
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Reccsar Private Limited</h3>
+          <div class="timeline-role">Full Stack Web Development Intern (1 Month)</div>
+          <div class="timeline-date">JUN 1 2026 – JUL 1 2026</div>
+          <ul>
+            <li>Gained practical experience in frontend and backend development and application design.</li>
+            <li>Worked with HTML, CSS, JavaScript, UI/UX, scoop, Mango DB for web application development.</li>
+          </ul>
+          <a href="https://drive.google.com/file/d/13gNbFCKECxhWOHLEK4jmxhbu22QqQSVh/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="link-action">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- IBM -->
       <div class="timeline-item">
         <div class="timeline-content">
           <h3>IBM</h3>
-          <div class="timeline-role">Technical Intern</div>
-          <p>Secured an internship directly through state-level hackathon performance. Gained exposure to enterprise workflows, cloud architecture, and technical problem solving.</p>
+          <div class="timeline-role">Software Development Intern (1 Month)</div>
+          <div class="timeline-date">MAR 9 2026 – APR 10 2026</div>
+          <ul>
+            <li>Gained hands-on experience with IBM Cognos Analytics for data analysis and visualization.</li>
+            <li>Worked with KPIs and data visualization techniques to support analytical decision-making.</li>
+          </ul>
           <a href="https://drive.google.com/file/d/1H7J5qD8ue4Zj7OrtNtVePNpEdaa25HAw/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="link-action">
             <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
           </a>
         </div>
       </div>
+
+      <!-- HCLTech -->
       <div class="timeline-item">
         <div class="timeline-content">
           <h3>HCLTech</h3>
-          <div class="timeline-role">Engineering Intern</div>
-          <p>Engaged in enterprise software workflows, software architecture reviews, and applied modern development methodologies.</p>
+          <div class="timeline-role">Power BI Intern (6 Weeks)</div>
+          <div class="timeline-date">JUN 30 2025 – AUG 14 2025</div>
+          <ul>
+            <li>Gained hands-on experience with Power BI and data visualization.</li>
+            <li>Assisted with onboarding activities.</li>
+          </ul>
           <a href="https://drive.google.com/file/d/194Ka0LI_gc5uejnan5tfSurKG7OipRyf/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="link-action">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
-          </a>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h3>Reccsar Private Limited</h3>
-          <div class="timeline-role">Software Development Intern</div>
-          <p>Implemented modular feature sets and collaborated on frontend and backend integration tasks across production builds.</p>
-          <a href="https://drive.google.com/file/d/13gNbFCKECxhWOHLEK4jmxhbu22QqQSVh/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="link-action">
             <i class="fa-solid fa-arrow-up-right-from-square"></i> View Certificate
           </a>
         </div>
@@ -636,15 +706,15 @@
       <div class="achievement-card">
         <div class="achievement-icon"><i class="fa-solid fa-trophy"></i></div>
         <div>
-          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">State-Level Hackathon Finalist</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">Ranked among the Top 400 teams out of 15,000+ participating teams statewide.</p>
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Hackathon Achievement</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Selected among the Top 400 teams out of 15,000+ teams in state level hackathon.</p>
         </div>
       </div>
       <div class="achievement-card">
         <div class="achievement-icon"><i class="fa-solid fa-medal"></i></div>
         <div>
-          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">IBM Placement Recognition</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem;">Secured an industry internship spot at IBM solely through competitive hackathon evaluation.</p>
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">IBM Internship Opportunity</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Earned an IBM internship opportunity directly through hackathon performance.</p>
         </div>
       </div>
     </div>
@@ -653,7 +723,7 @@
   <!-- Certifications Section -->
   <section id="certifications" class="container">
     <div class="section-header">
-      <p class="section-tag">Learning</p>
+      <p class="section-tag">Certificates</p>
       <h2 class="section-title">Certifications</h2>
     </div>
     <div class="cert-grid">
@@ -690,14 +760,26 @@
       <p class="section-tag">Academics</p>
       <h2 class="section-title">Education</h2>
     </div>
-    <div class="edu-card">
-      <div>
-        <h3 style="font-size: 1.15rem; font-weight: 700;">SRM Madurai College For Engineering And Technology</h3>
-        <p style="color: var(--text-muted); margin-top: 0.25rem;">B.E. in Computer Science Engineering</p>
-        <p style="color: var(--primary); font-weight: 600; margin-top: 0.5rem;">CGPA: 8.12</p>
+    <div class="education-grid">
+      <div class="edu-card">
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 700;">B.E - Computer Science Engineering</h3>
+          <p style="color: var(--text-muted); margin-top: 0.25rem;">SRM Madurai College For Engineering And Technology</p>
+          <p style="color: var(--primary); font-weight: 600; margin-top: 0.5rem;">CGPA: 8.12</p>
+        </div>
+        <div style="color: var(--text-muted); font-weight: 600;">
+          SEPT 2023 - Present
+        </div>
       </div>
-      <div style="color: var(--text-muted); font-weight: 600;">
-        2023 – 2027
+      <div class="edu-card">
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 700;">Higher Secondary (12th Grade)</h3>
+          <p style="color: var(--text-muted); margin-top: 0.25rem;">CEOA Matriculation Higher Secondary School</p>
+          <p style="color: var(--primary); font-weight: 600; margin-top: 0.5rem;">Percentage: 81%</p>
+        </div>
+        <div style="color: var(--text-muted); font-weight: 600;">
+          JUN 2022 – MAR 2023
+        </div>
       </div>
     </div>
   </section>
